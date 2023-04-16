@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.flex-between-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background: #e7eaef;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-end{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+}
+.header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+.div{
+    flex: 1;
+}
+p{
+    flex: 1.2;
+    color: red;
+    font-size: 2em;
+    font-weight: bolder;
+}
+.header__item{
+    flex: 1;
+    font-size: 15px;
+}
+.header__item-list+.header__item-list{
+    display: inline-block;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.header__item-list i{
+    cursor: pointer;
+}
+.menu{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+.menu__item{
+    width: 100%;
+    font-size: 14px;
+}
+.menu__item-list{
+    display: inline-block;
+    margin: 0 15px;
+    cursor: pointer;
+}
+a{
+    display: none;
+}
+
+@media(max-width: 768px){
+    header{
+        width: 100%;
+    }
+    .container{
+        width: 720px;
+    }
+    p{
+        flex: 1.5;
+        font-size: 1.75em;
+    }
+    .div{
+    }
+    .header__item{
+        font-size: 12px;
+    }
+    .menu__item{
+        font-size: 12px;
+    }
+}
+@media(max-width: 576px){
+    .header{
+        width: 100%;
+
+    }
+    .container{
+        width: 540px;
+    }
+    .menu{
+        height: 220px;
+    }
+    .header__item{
+        font-size: 10px;
+        display: none;
+    }
+    .div{
+        display: none;
+    }
+    .menu__item{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        line-height: 35px;
+        font-size: 10px;
+    }
+    .menu__item-list{
+        display: none;
+    }
+    a{  
+        padding-left: 50px;
+        width: 100%;
+        display: block;
+        color: #333;
+    }
+    a:hover{
+        background-color: #333;
+        color: #fff;
+    }
+}
